@@ -1,0 +1,16 @@
+.portfolio_wrapper{
+    width: 50%;
+    height: 85%;
+    background-color: #B3B3B3;
+    margin: 0 35px;
+}
+
+.portfolio_ph_1{
+    background: url();
+    width: 65%;
+    height: 40%;
+    background-clip: border-box;
+    background-size: cover;
+    background-position: 27%;
+
+}

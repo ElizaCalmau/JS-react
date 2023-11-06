@@ -7,8 +7,6 @@
   box-sizing: border-box; /* prevent appearing of scroll due to padding */
   display: flex;
   justify-content: space-between;
-  justify-content: end;
-
-
+  align-items: center;
 }
 
