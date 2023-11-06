@@ -1,0 +1,23 @@
+.skills_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-transform: uppercase;
+}
+
+.skills_wrapper h3 {
+    margin: 10px;
+    font-weight: 500;
+    color: #4B4B4B;
+}
+
+.skills_wrapper li {
+    list-style-type: none;
+    color: #fff;
+    margin: 10px;
+}
+
+.skills_wrapper ul{
+    text-align: right;
+    margin: 10px 0;
+}

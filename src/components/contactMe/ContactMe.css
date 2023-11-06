@@ -1,0 +1,24 @@
+.contact_me_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.contact_me_wrapper h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #4B4B4B;
+}
+
+.contact_me_wrapper p {
+    margin: 10px;
+}
+
+.contact_me_wrapper a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.contact_me_wrapper a:hover{
+    color: #df7f7f;
+}
