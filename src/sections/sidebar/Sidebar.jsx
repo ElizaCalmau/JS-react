@@ -3,6 +3,7 @@ import { GeneralInfo } from "../../components/generalInfo";
 import { Skills } from '../../components/skills';
 import { ContactMe } from '../../components/contactMe';
 import { ButtonAside } from '../../components/buttonAside';
+import { Photo } from '../../components/photo';
 
 export const Sidebar = () => {
     return(
@@ -11,6 +12,7 @@ export const Sidebar = () => {
             <Skills />
             <ContactMe />
             <ButtonAside />
+            <Photo />
         </div>
     )
 }

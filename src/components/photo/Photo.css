@@ -1,0 +1,12 @@
+#aside_photo{
+    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/ph.jpg);
+    width: 68%;
+    height: 35%;
+    background-clip: border-box;
+    background-size: cover;
+    background-position: 27%;
+    position: absolute;
+    top: 24%;
+    left: -20%;
+    border-radius: 100%;
+}
