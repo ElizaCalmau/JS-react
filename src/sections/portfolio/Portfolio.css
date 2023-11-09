@@ -1,46 +1,45 @@
 .portfolio_wrapper{
     width: 50%;
     height: 85%;
+
     /* background-color: #B3B3B3; */
-    box-shadow: 5px 9px 38px -7px rgba(0,0,0,0.61);
--webkit-box-shadow: 5px 9px 38px -7px rgba(0,0,0,0.61);
--moz-box-shadow: 5px 9px 38px -7px rgba(0,0,0,0.61);
+box-shadow: 5px 9px 38px -7px rgb(0 0 0 / 61%);
     gap: 10px;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
     justify-content: center;
     margin: 0 35px;
 }
 
 .portfolio_ph_1{
-    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio1.jpg);
+    background: url("https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio1.jpg");
     width: 81%;
     height: 43%;
     margin: 0 auto;
     background-clip: border-box;
     background-size: contain;
     background-repeat: no-repeat;
-    box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
+    box-shadow: 2px 3px 10px 0 rgb(102 101 101 / 75%);
 }
 
 .portfolio_ph_2{
-    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio2.jpg);
+    background: url("https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio2.jpg");
     width: 47%;
     height: 45%;
     background-clip: border-box;
     background-size: contain;
     background-repeat: no-repeat;
-    box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
+    box-shadow: 2px 3px 10px 0 rgb(102 101 101 / 75%);
 }
+
 .portfolio_ph_3{
-    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio3.jpg);
+    background: url("https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio3.jpg");
     width: 34%;
     height: 55%;
     background-clip: border-box;
     background-size: contain;
     background-repeat: no-repeat;
-    box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
+    box-shadow: 2px 3px 10px 0 rgb(102 101 101 / 75%);
 }

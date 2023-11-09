@@ -1,5 +1,5 @@
 #aside_photo{
-    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/ph.jpg);
+    background: url("https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/ph.jpg");
     width: 65%;
     height: 40%;
     background-clip: border-box;
@@ -9,7 +9,5 @@
     top: 24%;
     left: -20%;
     border-radius: 100%;
-    box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
--webkit-box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
--moz-box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
+box-shadow: 4px 8px 10px -5px rgb(0 0 0 / 75%);
 }
