@@ -2,6 +2,7 @@ import './Portfolio.css'
 
 export const Portfolio = () => {
     return(
+        <>
         <div className='portfolio_wrapper'>
             <div className='portfolio_ph_1'>
                 <img src='https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio1.jpg' alt='ph1'/>
@@ -13,5 +14,10 @@ export const Portfolio = () => {
             <img src='https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/portfolio3.jpg' alt='ph2'/>
             </div>
         </div>
+        <div className='links'>
+        <a href='https://github.com/ElizaCalmau/module-js-15-coffeshop'>Link for Repo</a>
+        <a href='https://elizacalmau.github.io/module-js-15-coffeshop/'>Check project on stage</a>
+        </div>
+        </>
     )
 }

@@ -33,3 +33,9 @@
     box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
 }
 
+.links{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin: 30px auto;
+}
