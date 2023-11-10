@@ -1,11 +1,11 @@
 import './App.css';
+import { ChangableBlock } from './sections/changableBlock';
 import { Sidebar } from './sections/sidebar';
-import { Portfolio } from './sections/portfolio/Portfolio';
 
 function App() {
   return (
     <>  
-  <Portfolio/>
+  <ChangableBlock/>
   <Sidebar/>
     </>
   )
