@@ -1,6 +1,7 @@
 .changable_block{
     width: 54%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
