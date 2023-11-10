@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-.changable_button{
+.unclicked_button{
     background-color: #FEA820;
     color: #fff;
     text-transform: uppercase;
@@ -23,7 +23,7 @@
     padding: 16px;
 }
 
-.unfocus {
+.clicked_button{
     background-color: #d9d9d9;
     cursor: unset;
     color: #fff;
