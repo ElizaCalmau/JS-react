@@ -15,8 +15,8 @@ export const Portfolio = () => {
             </div>
         </div>
         <div className='links'>
-        <a href='https://github.com/ElizaCalmau/module-js-15-coffeshop'>Link for Repo</a>
-        <a href='https://elizacalmau.github.io/module-js-15-coffeshop/'>Check project on stage</a>
+        <a href='https://github.com/ElizaCalmau/module-js-15-coffeshop'>Repo link</a>
+        <a href='https://elizacalmau.github.io/module-js-15-coffeshop/'>Project staging</a>
         </div>
         </>
     )
