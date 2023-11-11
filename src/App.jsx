@@ -1,6 +1,6 @@
-import './App.css';
 import { ChangableBlock } from './sections/changableBlock';
 import { Sidebar } from './sections/sidebar';
+import './App.css';
 
 function App() {
   return (

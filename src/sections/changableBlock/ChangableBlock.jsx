@@ -1,7 +1,7 @@
-import './ChangableBlock.css'
+import { useState } from 'react'
 import { Portfolio } from '../portfolio'
 import { Info } from '../info'
-import { useState } from 'react'
+import './ChangableBlock.css'
 
 export const ChangableBlock = () => {
     const [block, setBlock] = useState(<Info/>);
