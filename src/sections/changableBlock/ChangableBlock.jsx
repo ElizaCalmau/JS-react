@@ -12,7 +12,6 @@ export const ChangableBlock = () => {
             return !prevState;
         })
        
-        handleToggle();
         handleText();
     }
 
