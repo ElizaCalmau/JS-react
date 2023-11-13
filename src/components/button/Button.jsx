@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Button.css'
 
 export const Button = () => {
     const [buttonText, setButtonText] = useState(false);
@@ -9,8 +10,5 @@ export const Button = () => {
         });
       }
 
-    return (<button onClick={handleClick} style={{
-        width: 100,
-        height: 50,
-        backgroundColor: buttonText ? 'green' : 'red'}}> {buttonText ? 'hello' : '' } </button>);
+    return (<button onClick={handleClick} className={ buttonText ? 'green' : 'red'}> {buttonText ? 'hello' : '' } </button>);
 }
