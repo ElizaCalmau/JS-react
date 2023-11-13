@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import math from './utils/math'
 import './App.css'
+import { useState } from 'react';
+import {arr as array} from './utils/math'
+
+console.log(array)
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+  const divide = math.div(10, 5);
+  const multiply = math.mul(2, 4)
+  let [color, setColor] = useState('light');
+  const setTheme = ()=> {
+    setColor(color ==='light' ? 'black' : 'light');
+  }
+  let [arr, setArr] = useState(array);
+  return(
     <>
-      <div>
-        <a href="https://vitejs.dev">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <h2>{divide}</h2>
+    <h3>{multiply}</h3>
+    <div style={{backgroundColor: color === 'light' ? 'beige' : 'grey', width: 200, height: 200}}>
+    <button onClick={setTheme}>{color}</button>
+    </div>
+    <div style={{width: 200, height: 200, backgroundColor: 'pink'}}>
+      {arr}
+      <button onClick={()=> {
+        setArr((prevState) => {
+          let nextState = prevState.slice(0)
+          nextState.sort((a,b) => a - b);
+          console.log(nextState);
+          return nextState;
+        })
+      }}>Sort</button>
+    </div>
     </>
   )
+
 }
 
 export default App
