@@ -43,3 +43,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.to-do-list{
+  padding: 20px;
+  border: 2px solid gray;
+  margin: 40px;
+}
