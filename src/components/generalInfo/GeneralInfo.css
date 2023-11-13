@@ -1,16 +1,16 @@
-.general_info_wrapper{
+.generalInfo{
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
-.general_info_wrapper h2, .general_info_wrapper h3{
+.generalInfo h2, .generalInfo h3{
     color: #4B4B4B;
     font-weight: 500;
     margin: 10px;
     text-transform: uppercase;
 } 
-.general_info_wrapper h3, .general_info_wrapper p{
+.generalInfo h3, .generalInfo p{
     color: #fff;
     margin: 10px;
 }

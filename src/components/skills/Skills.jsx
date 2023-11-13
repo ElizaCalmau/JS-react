@@ -2,7 +2,7 @@ import './Skills.css'
 
 export const Skills = () => {
     return(
-        <div className='skills_wrapper'>
+        <div className='skills'>
             <h3>Skills</h3>
             <ul>
                 <li>html</li>

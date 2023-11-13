@@ -5,26 +5,28 @@ import './ChangableBlock.css'
 
 export const ChangableBlock = () => {
     const [block, setBlock] = useState(<Info/>);
+    const [text, setText] = useState('See Portfolio');
+    const [isActive, setActive] = useState(true);
+
     function handleCLick () {
-        block.type.name == 'Info' ? setBlock(<Portfolio/>):setBlock(<Info/>);
+        console.log(block)
+        block.type.name === 'Info' ? setBlock(<Portfolio/>):setBlock(<Info/>);
         handleToggle();
         handleText();
     }
 
-    const [isActive, setActive] = useState("false");
-    const handleToggle = () => {
+    function handleToggle () {
         setActive(!isActive);
       };
 
-    const [text, setText] = useState('See Portfolio');
-    const handleText = () => {
+    function handleText () {
         text == 'See Portfolio' ? setText('See Bio') : setText('See Portfolio');
     }
 
     return(
-        <div className="changable_block">
+        <div className="changableBlock">
             {block}
-            <button className= { isActive? 'unclicked_button' : 'clicked_button'} onClick={handleCLick}>{text}</button>
+            <button className= { isActive? 'unclickedButton' : 'clickedButton'} onClick={handleCLick}>{text}</button>
         </div>
     )
 }

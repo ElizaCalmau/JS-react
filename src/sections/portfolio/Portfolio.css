@@ -1,4 +1,4 @@
-.portfolio_wrapper{
+.portfolioWrapper{
     width: 100%;
     height: 85%;
     padding: 2em;
@@ -11,24 +11,24 @@
     box-sizing: border-box;
 }
 
- .portfolio_ph_1{
+ .portfolioPh1{
     width: 88%;
     height: auto;
     box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
 }
-.portfolio_ph_1 img,
-.portfolio_ph_2 img,
-.portfolio_ph_3 img{
+.portfolioPh1 img,
+.portfolioPh2 img,
+.portfolioPh3 img{
     width: 100%;
 }
 
 
-.portfolio_ph_2{
+.portfolioPh2{
     width: 52%;
     box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
 }
 
-.portfolio_ph_3{
+.portfolioPh3{
     width: 30%;
     box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
 }

@@ -1,4 +1,4 @@
-.changable_block{
+.changableBlock{
     width: 54%;
     height: auto;
     min-height: 100%;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-.unclicked_button{
+.unclickedButton{
     background-color: #FEA820;
     color: #fff;
     text-transform: uppercase;
@@ -24,7 +24,7 @@
     padding: 16px;
 }
 
-.clicked_button{
+.clickedButton{
     background-color: #d9d9d9;
     cursor: unset;
     color: #fff;
