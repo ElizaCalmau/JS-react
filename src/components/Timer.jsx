@@ -16,7 +16,6 @@ export const Timer = () => {
         
 
 
-    return(
-        <div>{count}</div>
-    )
+    return <div style={{backgroundColor: "pink", padding: 20, borderRadius: 10}}>It is {count} seconds since you have opened this page</div>
+    
 }

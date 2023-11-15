@@ -1,4 +1,5 @@
 import './App.css'
+import { Products } from './components/Products'
 import { Timer } from './components/Timer'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <Timer />
+      <Products />
     </>
   )
 }
