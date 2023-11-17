@@ -4,21 +4,23 @@ export const Products = () => {
   const [post, setPost] = useState([]);
   const [location, setLocation] = useState({ latitude: null, longitude: null });
   useEffect(() => {
-    if (post.length < 1) {
+    if (post.length === 0) {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
-          console.log(position);
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
           setLocation({ latitude, longitude });
         });
       }
     }
+  }, [post.length])
 
-    fetch("https://dummyjson.com/posts")
+    useEffect(()=>{
+     fetch("https://dummyjson.com/posts")
       .then((res) => res.json())
-      .then((data) => setPost(data.posts));
-  }, [post.length]);
+      .then((data) => setPost(data.posts)); 
+    }, [])
+    
 
   return (
     <>
