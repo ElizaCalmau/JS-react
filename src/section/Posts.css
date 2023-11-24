@@ -1,0 +1,6 @@
+.postsLogged {
+    background-color: chocolate;
+}
+.postsUnlogged{
+    display: none;
+}

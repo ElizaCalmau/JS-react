@@ -1,0 +1,6 @@
+.btn-logged{
+    display: none;
+}
+.btn-unlogged{
+    background-color: rgb(247, 247, 247);
+}
