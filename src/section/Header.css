@@ -1,0 +1,14 @@
+.logged {
+    width: 100vw;
+    height: 150px;
+    background-color: rgb(83, 210, 100);
+    color: #fff;
+}
+
+.unlogged{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 300px;
+    background-color: rgb(210, 83, 83);
+    color: #fff;
+}
