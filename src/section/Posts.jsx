@@ -8,11 +8,12 @@ export const Posts = () => {
     fetch('https://dummyjson.com/posts')
     .then(res => res.json())
     .then(data => setPosts(data.posts));
+    const post = posts.map((p)=>{
+        return <p key={p.id}> {p.title}</p>
+    })
     return(
-        <div className={log === 'logged' ? 'postsLogged' : 'postsUnlogged'}>
-        {posts.map((p)=>{
-            return <p key={p.id}> {p.title}</p>
-        })}
+        <div>
+        {log === 'logged' ? post : 'log in pls'}
     </div>
     ) 
     }
