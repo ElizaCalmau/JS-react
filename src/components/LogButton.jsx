@@ -28,7 +28,7 @@ export const LogButton = () => {
         
     }   
     return <>
-    <button type="submit" onClick={handleLogin} className={log === 'logged' ? 'btn-logged' : 'btn-unlogged'}>
+    <button onClick={handleLogin} className={log === 'logged' ? 'btn-logged' : 'btn-unlogged'}>
         {log === 'logged' ? '' : 'Log in, please'}
         </button>
 

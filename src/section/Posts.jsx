@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../provider/UserProvider";
-import './Posts.css'
 
 export const Posts = () => {
     const {log} = useContext(UserContext);
