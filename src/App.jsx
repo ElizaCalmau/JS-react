@@ -1,30 +1,15 @@
 import './App.css'
-import { useState, useMemo } from 'react';
-import {arr as array} from './utils/math'
-
-console.log(array)
+import { useRef } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const memoValue = useMemo(()=> {
-    let sum = 0;
-    for(let i = 0; i < 10000; i++){
-      sum += i;
-    }
-    return sum;
-  }, [])
+  const inputRef = useRef(null)
 
-
-  return (
+  return(
     <>
-    <div>
-    {memoValue}
+    <input ref={inputRef}/>
     <button onClick={()=> {
-      setCount((prevState) => {
-        return prevState + 1;
-      })
-    }}>{count}</button>
-    </div>
+      inputRef.current.focus();
+    }}>click</button>
     </>
   )
 }
