@@ -15,7 +15,7 @@ export const Posts = () => {
 
     return <div>
         {posts.map((p)=> {
-            return <p key = {p.id} style = {{border:'1px solid black', margin: 0, padding: 20, }}> {userState.id == p.id ? 'AUTHOR: ' + p.title : p.title}</p>
+            return <p key = {p.id} style = {{border:'1px solid black', margin: 0, padding: 20, }}> {userState.id === p.id ? 'AUTHOR: ' + p.title : p.title}</p>
         })}
     </div>
 }

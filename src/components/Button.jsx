@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { UserContext } from "../provider/UserProvider";
 
 export const Button = () => {
-    const {userState, setUserState} = useContext(UserContext);
-  function handleInput() {
+  const { userState, setUserState } = useContext(UserContext);
+  function fetchData() {
     fetch("https://dummyjson.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -13,11 +13,14 @@ export const Button = () => {
       }),
     })
       .then((res) => res.json())
-      .then(data => {
-        setUserState((prevUserState) => ({...prevUserState, id: data.id}))
+      .then((data) => {
+        setUserState((prevUserState) => ({ ...prevUserState, id: data.id }));
       });
-      
   }
 
-  return <button onClick={handleInput}>{userState.id ? 'You logged' : 'Log in'}</button>;
+  return (
+    <button onClick={fetchData}>
+      {userState.id ? "You logged in" : "Log in"}
+    </button>
+  );
 };
