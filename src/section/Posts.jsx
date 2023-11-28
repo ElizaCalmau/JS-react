@@ -15,7 +15,7 @@ export const Posts = () => {
 
     return <div>
         {posts.map((p)=> {
-            return <p key = {p.id} style = {{border:'1px solid black', margin: 0, padding: 20, }}> {}</p>
+            return <p key = {p.id} style = {{border:'1px solid black', margin: 0, padding: 20, }}> {p.title}</p>
         })}
     </div>
 }
