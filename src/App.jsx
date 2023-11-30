@@ -1,15 +1,24 @@
+import { useState } from 'react'
+import {Button} from './cmps/Button'
 import './App.css'
-import { useRef } from 'react';
 
 function App() {
-  const inputRef = useRef(null)
-
+let [count, setCount] = useState('')
+const [disabled, setDisabled] =useState(true)
   return(
     <>
-    <input ref={inputRef}/>
-    <button onClick={()=> {
-      inputRef.current.focus();
-    }}>click</button>
+    <input value={count} onChange={(e)=>{
+      if(e.target.value.length < 5){
+      setCount(e.target.value);
+      }
+    }}/>
+    <div>
+      <input type='number' onBlur={(e)=>{
+        const num = +e.target.value 
+        setDisabled(num < 18 ? true : false)
+      }}/>
+      <Button value={disabled}/>
+    </div>
     </>
   )
 }
