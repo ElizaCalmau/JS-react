@@ -1,0 +1,15 @@
+.myPhoto{
+    background-image: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/cv/react/src/assets/cv_ph.jpg);
+    width: 25%;
+    height: 35%;
+    background-clip: border-box;
+    background-size: cover;
+    background-position: 27%;
+    position: absolute;
+    top: 24%;
+    left: 10%;
+
+    box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
+-webkit-box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
+}
