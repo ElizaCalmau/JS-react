@@ -1,9 +1,12 @@
+import { Contacts } from '../components/contacts/Contacts'
+import { Photo } from '../components/photo/Photo'
+import { Position } from '../components/position/Position'
 import './AboutMe.css'
 
 export const AboutMe = () => {
     return<main>
-        <div className="myPhoto"> </div>
-         <h2>Yelyzaveta Lysenko</h2>
-         <h3>Trainee/Junior Front-End Devepoler</h3>
+            <Photo/>
+            <Position/>
+            <Contacts/>
          </main>
 }
