@@ -4,10 +4,9 @@ import './Table.css'
 export const Table=()=>{
 
     const onClick = (e) => {
-                e.target.childNodes[0].classList.toggle('visible');
-                console.log(e)
+         e.target.childNodes[0].classList.toggle('visible');
     }
-    
+
     return <table style={{border: '1px solid black'}} onClick={onClick}>
         <tr>
             <td><span>1</span></td>
