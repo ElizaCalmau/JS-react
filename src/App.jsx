@@ -1,24 +1,37 @@
-import { useState } from 'react'
-import {Button} from './cmps/Button'
+import { Formik, Form, Field } from 'formik';
+import { Input } from './cmp/Input'
+import { InputWrapper } from './cmp/InputWrapper'
 import './App.css'
+import { SignUp, SignUpHook } from './cmp/signup';
 
 function App() {
-let [count, setCount] = useState('')
-const [disabled, setDisabled] =useState(true)
+
   return(
     <>
-    <input value={count} onChange={(e)=>{
-      if(e.target.value.length < 5){
-      setCount(e.target.value);
-      }
-    }}/>
-    <div>
-      <input type='number' onBlur={(e)=>{
-        const num = +e.target.value 
-        setDisabled(num < 18 ? true : false)
-      }}/>
-      <Button value={disabled}/>
-    </div>
+      <InputWrapper>
+        {(value, onChange)=>{
+          return <Input value={value} onChange={onChange}/>
+        }}
+      </InputWrapper>
+      <Formik enableReinitialize 
+      initialValues={{firstName: ''}}
+      onSubmit={(values, formikBag) => {
+        console.log('values', values)
+        console.log('formikBag', formikBag)
+      }}>
+        {(props)=>{
+          console.log(props)
+          return <Form>
+            <label>
+              First Name: 
+              <Field name='firstName'/>
+            </label>
+            <button type='submit'>Submit</button>
+          </Form>
+        }}
+      </Formik>
+      <SignUp/>
+      <SignUpHook/>
     </>
   )
 }
