@@ -1,0 +1,41 @@
+.portfolioWrapper{
+    width: 100%;
+    height: 85%;
+    padding: 2em;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+ .portfolioPh1{
+    width: 88%;
+    height: auto;
+    box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
+}
+.portfolioPh1 img,
+.portfolioPh2 img,
+.portfolioPh3 img{
+    width: 100%;
+}
+
+
+.portfolioPh2{
+    width: 52%;
+    box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
+}
+
+.portfolioPh3{
+    width: 30%;
+    box-shadow: 2px 3px 10px 0px rgb(102 101 101 / 75%);
+}
+
+.links{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin: 30px auto;
+}

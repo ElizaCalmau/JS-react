@@ -1,0 +1,14 @@
+#aside_photo{
+    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/33.jpg);
+    width: 65%;
+    height: 40%;
+    background-clip: border-box;
+    background-size: cover;
+    position: absolute;
+    top: 24%;
+    left: -20%;
+    border-radius: 100%;
+    box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
+-webkit-box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 8px 10px -5px rgba(0,0,0,0.75);
+}
