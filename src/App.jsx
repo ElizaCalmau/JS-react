@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Tab } from './components/Tab';
+import { Table } from './components/Table'
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const items = [
+    {
+      key: '1',
+      label: 'Tab 1',
+      children: 'Content of Tab Pane 1',
+    },
+    {
+      key: '2',
+      label: 'Tab 2',
+      children: 'Content of Tab Pane 2',
+    },
+    {
+      key: '3',
+      label: 'Tab 3',
+      children: 'Content of Tab Pane 3',
+    },
+  ];
+  const [tabInfo, setTabInfo] = useState(items[0].children)
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div style={{display:'flex'}}>
+      <Tab index={1} setTabInfo={setTabInfo} items={items}/>
+      <Tab index={2} setTabInfo={setTabInfo} items={items}/>
+      <Tab index={3} setTabInfo={setTabInfo} items={items}/>
+    </div>
+    <div> {tabInfo}</div>
+    
+      <Table />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

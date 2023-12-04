@@ -1,0 +1,14 @@
+td{
+    border: 1px solid pink;
+    padding: 10px;
+}
+span{
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden
+}
