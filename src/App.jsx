@@ -25,9 +25,9 @@ function App() {
   return (
     <>
     <div style={{display:'flex'}}>
-      <Tab index={1} setTabInfo={setTabInfo}/>
-      <Tab index={2} setTabInfo={setTabInfo}/>
-      <Tab index={3} setTabInfo={setTabInfo}/>
+      <Tab index={1} setTabInfo={setTabInfo} items={items}/>
+      <Tab index={2} setTabInfo={setTabInfo} items={items}/>
+      <Tab index={3} setTabInfo={setTabInfo} items={items}/>
     </div>
     <div> {tabInfo}</div>
     
