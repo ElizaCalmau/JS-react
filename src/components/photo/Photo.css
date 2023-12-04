@@ -1,10 +1,9 @@
 #aside_photo{
-    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/cv_photo.jpg);
+    background: url(https://raw.githubusercontent.com/ElizaCalmau/JS-react/project/cv/src/assets/33.jpg);
     width: 65%;
     height: 40%;
     background-clip: border-box;
     background-size: cover;
-    background-position: 27%;
     position: absolute;
     top: 24%;
     left: -20%;
