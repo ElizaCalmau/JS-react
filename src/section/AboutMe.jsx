@@ -4,9 +4,9 @@ import { Position } from '../components/position/Position'
 import './AboutMe.css'
 
 export const AboutMe = () => {
-    return<main>
+    return <main>
             <Photo/>
             <Position/>
             <Contacts/>
-         </main>
+           </main>
 }

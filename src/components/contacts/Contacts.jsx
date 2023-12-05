@@ -1,3 +1,5 @@
+import './Contacts.css'
+
 export const Contacts = () => {
     return <div>
         <p>Email address: <a href='mailto:elizabethcalmau@gmail.com'>elizabethcalmau@gmail.com</a> </p>

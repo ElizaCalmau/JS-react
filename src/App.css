@@ -1,8 +1,10 @@
 #root {
 display: flex;
-justify-content: space-evenly;
-width: 100vw;
+justify-content: space-around;
+width: 70vw;
 height: 100vh;
-margin: 3rem;
+margin: 3rem auto;
+padding: 2em;
+box-shadow: 6px 1px 10px -5px rgb(0 0 0 / 75%);
 }
 

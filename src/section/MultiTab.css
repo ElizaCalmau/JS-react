@@ -1,3 +1,10 @@
 .multiTabWrapper{
-    flex-direction: row;
+    width: 45%;
+    padding: 2em;
+}
+li {
+    font-size: 16px;
+}
+h3 {
+    color: gray
 }
