@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {Button} from './cmps/Button'
 import './App.css'
+import { SingUpForm } from './SignUpForm'
 
 function App() {
 let [count, setCount] = useState('')
@@ -18,6 +19,7 @@ const [disabled, setDisabled] =useState(true)
         setDisabled(num < 18 ? true : false)
       }}/>
       <Button value={disabled}/>
+      <SingUpForm/>
     </div>
     </>
   )
