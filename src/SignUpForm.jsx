@@ -1,26 +1,24 @@
-import {Formik, Form, Field, ErrorMessage} from 'formik';
-import * as Yup from 'yup';
+import { useForm } from 'react-hook-form'
 
-const signupSchema = Yup.object({
-    email: Yup.string().email().required(),
-    password: Yup.string()
-})
 export const SingUpForm = () => {
-    return <Formik
-       initialValues={{ email: '', password: '' }}
-       validationSchema={signupSchema}
-       onSubmit={(values,formikBag) => {
-         console.log(values, formikBag)
-       }}
-     >
-        {() => {
-            return(
-                <Form>
-                    <Field name='email'/>
-                    <ErrorMessage name='email'/>
-                    <Field name='password'/>
-                </Form>
-            )
-        }}
-     </Formik>
+    const form = useForm();
+    console.log(form)
+    const onSubmit = ( ...rest) =>{
+        console.log(rest)
+    }
+    return <main>
+        <form onSubmit={form.handleSubmit(onSubmit)}>
+            <input {...form.register('name')}/>
+            <input {...form.register('student')} type='checkbox'/>
+            <input
+          {...form.register('anotherField', {
+            onBlur: (e) => {
+              console.log('blur');
+            },
+          })}
+        />
+          <button type='submit'></button>  
+        </form>
+        
+    </main>
 }
