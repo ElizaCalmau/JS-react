@@ -12,7 +12,7 @@ export const SingUpForm = () => {
             <input {...form.register('student')} type='checkbox'/>
             <input
           {...form.register('anotherField', {
-            onBlur: (e) => {
+            onBlur: () => {
               console.log('blur');
             },
           })}

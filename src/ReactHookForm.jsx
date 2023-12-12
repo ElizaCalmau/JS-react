@@ -7,7 +7,7 @@ const schema = Yup.object({
     student: Yup.boolean().notRequired(),
     univercity: Yup.string().when('student', {
         is: true,
-        then: (schema) => schema.required().test('number-validation', 'string should not contain the number', (value, context)=>{
+        then: (schema) => schema.required().test('number-validation', 'string should not contain the number', (value)=>{
             return !/\d/.test(value)
         }) ,
         otherwise: (schema) => schema.notRequired()
