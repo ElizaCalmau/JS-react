@@ -1,33 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+import { City } from './City';
 import './App.css'
 
+const schema = Yup.object({
+  firstName: Yup.string().required('Please enter your name').min(3),
+  lastName: Yup.string().required().test('includes-vowels', 'Last Name should contains vowels', (value) => /[aeiouAEIOU]/.test(value)),
+  City: Yup.string().test('no-vowels', 'City should contain vowels', (value) => {
+    return /[aeiouAEIOU]/.test(value)}
+  ),
+  student: Yup.boolean().required(),
+  university: Yup.string().when('student', {
+    is: true,
+    then: (schema) => schema.required().max(8),
+    otherwise: (schema) => schema.notRequired()
+  }),
+  country: Yup.string().required().matches(/(a|u|i|o)/, 'Country should contain a vowels')
+})
+
 function App() {
-  const [count, setCount] = useState(0)
+
+  const form = useForm({
+    mode: 'onBlur',
+    reValidateMode: 'onSubmit',
+    resolver: yupResolver(schema)
+  });
+
+  const onSubmit = () =>{
+    console.log(form.formState)
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <form onSubmit={form.handleSubmit(onSubmit)}>
+        <label>
+          First Name: 
+          <input {...form.register('firstName')}/>
+          {form.formState.errors.firstName && <div className='error-message'>{form.formState.errors.firstName.message}</div>}
+        </label>
+        <label>
+          Last Name:
+          <input {...form.register('lastName')}type="text"/>
+          {form.formState.errors.lastName && <div className='error-message'>{form.formState.errors.lastName.message}</div>}
+        </label>
+        <label>
+          Country
+          <input {...form.register('country')}/>
+          {form.formState.errors.country && <div className='error-message'> {form.formState.errors.country.message}</div>}
+        </label>
+        <label>
+          City
+          <City {...form.register('City')}/>
+          {form.formState.errors.City && <div>{form.formState.errors.City.message}</div>}
+        </label>
+        <label>
+          Are you student?
+          <input {...form.register('student')} type='checkbox'/>
+        </label>
+        <label>
+          Enter your university:
+          <input {...form.register('university')}/>
+          {form.formState.errors.university && <div className='error-message'>{form.formState.errors.university.message}</div>}
+        </label>
+        <button type='submit'>Submit</button>
+      </form>
     </>
   )
 }
