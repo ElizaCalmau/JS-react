@@ -7,16 +7,16 @@ import './App.css'
 const schema = Yup.object({
   firstName: Yup.string().required('Please enter your name').min(3),
   lastName: Yup.string().required().test('includes-vowels', 'Last Name should contains vowels', (value) => /[aeiouAEIOU]/.test(value)),
-  City: Yup.string().required('Please enter your city').test('no-vowels', 'City should not contain vowels', (value) => {
-    return !/[aeiouAEIOU]/.test(value)}
+  City: Yup.string().test('no-vowels', 'City should contain vowels', (value) => {
+    return /[aeiouAEIOU]/.test(value)}
   ),
   student: Yup.boolean().required(),
-  univercity: Yup.string().when('student', {
+  university: Yup.string().when('student', {
     is: true,
     then: (schema) => schema.required().max(8),
     otherwise: (schema) => schema.notRequired()
   }),
-  country: Yup.string().matches(/(a|u|i|o)/, 'Country should contain a vowels')
+  country: Yup.string().required().matches(/(a|u|i|o)/, 'Country should contain a vowels')
 })
 
 function App() {
@@ -24,9 +24,6 @@ function App() {
   const form = useForm({
     mode: 'onBlur',
     reValidateMode: 'onSubmit',
-    defaultValues:{
-      firstName: ''
-    }, 
     resolver: yupResolver(schema)
   });
 
@@ -62,9 +59,9 @@ function App() {
           <input {...form.register('student')} type='checkbox'/>
         </label>
         <label>
-          Enter your Univercity:
-          <input {...form.register('univercity')}/>
-          {form.formState.errors.univercity && <div className='error-message'>{form.formState.errors.univercity.message}</div>}
+          Enter your university:
+          <input {...form.register('university')}/>
+          {form.formState.errors.university && <div className='error-message'>{form.formState.errors.university.message}</div>}
         </label>
         <button type='submit'>Submit</button>
       </form>
