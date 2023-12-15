@@ -1,0 +1,19 @@
+.cards-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid rgb(123 123 123);
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prod-info {
+    color: grey;
+    font-size: large;
+}

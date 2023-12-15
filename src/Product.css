@@ -1,0 +1,8 @@
+.found-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #d07585;
+    height: 80vh;
+    padding: 2em;
+}
