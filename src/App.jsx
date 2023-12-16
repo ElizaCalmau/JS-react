@@ -1,26 +1,30 @@
-import { useState } from 'react'
-import {Button} from './cmps/Button'
+import { Provider } from 'react-redux'
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+import { store } from '../store/store'
+import { Settings } from './pages/Settings'
 import './App.css'
-import { SingUpForm } from './SignUpForm'
+
 
 function App() {
-let [count, setCount] = useState('')
-const [disabled, setDisabled] =useState(true)
+
   return(
     <>
-    <input value={count} onChange={(e)=>{
-      if(e.target.value.length < 5){
-      setCount(e.target.value);
-      }
-    }}/>
-    <div>
-      <input type='number' onBlur={(e)=>{
-        const num = +e.target.value 
-        setDisabled(num < 18 ? true : false)
-      }}/>
-      <Button value={disabled}/>
-      <SingUpForm/>
-    </div>
+    <BrowserRouter>
+     <Provider store={store}>
+        <main>
+          <Switch>
+            <Route path='/' exact>
+              <h1>home</h1>
+              <Link to='/settings'>Settings</Link>
+            </Route>
+            <Route path='/settings'>
+              <Settings/>
+            </Route>
+          </Switch>
+        </main>
+      </Provider>
+
+    </BrowserRouter>
     </>
   )
 }
