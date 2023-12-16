@@ -3,7 +3,6 @@ import './Product.css'
 
 export const Product = ({products}) => {
     const { id } = useParams();
-    console.log({id})
     const foundProd = products.find((prod) => prod.id == parseInt(id));
     return(
         <div className="found-product">

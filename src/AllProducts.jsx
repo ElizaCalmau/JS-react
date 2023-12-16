@@ -9,7 +9,6 @@ export const AllProducts = ({ products }) => {
         <div className="cards-wrapper">
           {products &&
             products.map((prod) => {
-                console.log(prod)
               return (
                 <div key={prod.id} className="card">
                   <img src={prod.images[0]} alt="img" />
