@@ -4,13 +4,13 @@ import { fetchProducts, useProductsSelector} from '../store/products/ProductsSli
 
 export const Products = () => {
     const dispatch = useDispatch();
-    const products = useProductsSelector();
+    const productsState = useProductsSelector();
     useEffect(()=>{
         dispatch(fetchProducts())
     }, [dispatch])
     return(<div>
         <ul>
-            {products.map((prod) => {
+            {productsState.products.length > 0 && productsState.products.map((prod) => {
                 return <li key={prod.id}>{prod.title}</li>
             })}
         </ul>

@@ -4,28 +4,27 @@ import { useSelector } from "react-redux";
 
 export const fetchProducts = createAsyncThunk('fetch-products', async ()=>{
     const response= await fetch('https://dummyjson.com/products');
-    const data = await response.json();
-    return data.products;
+    if(response.ok){
+        const data = await response.json();
+        return data.products;
+    }
+    else {
+        console.error(response)
+    }
 })
 
-export const fetchUsers = createAsyncThunk('fetch-users', async () => {
-    const response = await fetch('https://dummyjson.com/users');
-    const data = await response.json();
-    console.log(data)
-    return data;
-})
 
 export const productsSlice = createSlice({
     name: 'products',
-    initialState: [],
+    initialState: {
+        products: []
+    },
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchProducts.fulfilled, (state, action) => {
-            return [...state, ...action.payload]
+            state.products = action.payload;
         })
-        .addCase(fetchUsers.fulfilled, (state, action) => {
-            return [...state, action.payload]
-        })
+        
     }
 })
 
